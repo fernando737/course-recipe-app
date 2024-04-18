@@ -59,7 +59,7 @@ class IngredientViewSet(mixins.DestroyModelMixin,
                         viewsets.GenericViewSet):
     """Manage ingredients in the database."""
     serializer_class = serializers.IngredientSerializer
-    queryset = Tag.objects.all()
+    queryset = Ingredient.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
 
